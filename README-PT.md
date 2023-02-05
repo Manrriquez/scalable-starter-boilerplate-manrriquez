@@ -113,113 +113,57 @@ e manutenção do seu código._
 ├── assets
 │   ├── img
 │   ├── js
-│   ├── scss
+│   ├── sass
 │        ├── base
-│        │   ├── _containers.scss
-│        │   ├── _grid.scss
-│        │   ├── _reboot.scss
+│        │   ├── _base.scss
 │        │   ├── _root.scss
-│        │   ├── _variables.scss
-│        │   └── _bootstrap-grid.scss
-│        │
-│        ├── helpers
-│        │   ├── _clearfix.scss
-│        │   ├── _colored-links.scss
-│        │   ├── _position.scss
-│        │   ├── _ratio.scss
-│        │   ├── _streched-link.scss
-│        │   ├── _text-truncation.scss
-│        │   ├── _visually-hidden.scss
-│        │   └── _helpers.scss
+│        │   └── _index.scss
 │        │
 │        ├── layout
-│        │   ├── _nav.scss
-│        │   ├── _navbar.scss
+│        │   ├── _header.scss
+│        │   ├── _footer.scss
 │        │   ├── _main.scss
-│        │   └── _footer.scss
+│        │   └── _index.scss
+│        │
+│        ├── pages
+│        │   ├── _home.scss
+│        │   ├── _privacy-policy.scss
+│        │   ├── _use-cockies.scss
+│        │   └── _index.scss
 │        │
 │        ├── modules
-│        │   ├── form
-│        │   │   ├── _floating-labels.scss
-│        │   │   ├── _form-check.scss
-│        │   │   ├── _form-control.scss
-│        │   │   ├── _form-range.scss
-│        │   │   ├── _form-select.scss
-│        │   │   ├── _form-text.scss
-│        │   │   ├── _input-group.scss
-│        │   │   ├── _labels.scss
-│        │   │   └── _validation.scss
+│        │   ├── components
+│        │   │   ├── _boxes.scss
+│        │   │   ├── _buttons.scss
 │        │   │   
-│        │   ├── _accordion.scss
-│        │   ├── _alert.scss
-│        │   ├── _badge.scss
-│        │   ├── _breadcrumb.scss
-│        │   ├── _button-group.scss
-│        │   ├── _buttons.scss
-│        │   ├── _card.scss
-│        │   ├── _carousel.scss
-│        │   ├── _close.scss
-│        │   ├── _dropdown.scss
-│        │   ├── _forms.scss
-│        │   ├── _images.scss
-│        │   ├── _list-group.scss
-│        │   ├── _modal.scss
-│        │   ├── _buttons.scss
-│        │   ├── _offcanvas.scss
-│        │   ├── _pagination.scss
-│        │   ├── _popover.scss
-│        │   ├── _progress.scss
-│        │   ├── _spinners.scss
-│        │   ├── _tables.scss
-│        │   ├── _toasts.scss
-│        │   ├── _tooltip.scss
-│        │   ├── _transition.scss
-│        │   └── _type.scss
+│        │   └── _index.scss
 │        │
 │        ├── states
-│        │   └── _states.scss
+│        │   └── _boxes.scss
+│        │   ├── _list.scss
+│        │   ├── _index.scss
 │        │
 │        ├── utilities
-│        │   ├── functions
-│        │   │   └── _functions.scss
-│        │   │
-│        │   ├── mixins
-│        │   │   ├── _alert.scss
-│        │   │   ├── _border-radius.scss
-│        │   │   ├── _box-shadow.scss
-│        │   │   ├── _breakpoints.scss
-│        │   │   ├── _buttons.scss
-│        │   │   ├── _claret.scss
-│        │   │   ├── _clearfix.scss
-│        │   │   ├── _color-scheme.scss
-│        │   │   ├── _container.scss
-│        │   │   ├── _deprecate.scss
-│        │   │   ├── _forms.scss
-│        │   │   ├── _gradient.scss
-│        │   │   ├── _grid.scss
-│        │   │   ├── _image.scss
-│        │   │   ├── _list-group.scss
-│        │   │   ├── _list.scss
-│        │   │   ├── _pagination.scss
-│        │   │   ├── _reset-text.scss
-│        │   │   ├── _resize.scss
-│        │   │   ├── _table-variants.scss
-│        │   │   ├── _text-truncate.scss
-│        │   │   ├── _transition.scss
-│        │   │   ├── _utilities.scss
-│        │   │   ├── _visually-hidden.scss
-│        │   │   └── _mixins.scss
-│        │   │
-│        │   ├── _api.scss
+│        │   ├── _keyframes.scss
+│        │   ├── _transforms.scss
+│        │   ├── _transitions.scss
 │        │   └── _utilities.scss
 │        │   
-│        ├── vendor
-│        │   └── _rfs.scss
+│        ├── responsive
+│        │   ├── _tablet.scss
+│        │   ├── _mobile.scss
+│        │   └── _index.scss
+│        │
+│        ├── shame
+│        │   └── _overrides.scss
 │        │ 
-│        ├── bootstrap.scss
 │        ├── main.scss
 │
 ├── README.md
+├── README-PT.md
+├── .gitignore
+├── .gulpfile.js
+├── package.json
 ├── LICENSE.txt
 ├── index.html
 
@@ -233,6 +177,21 @@ _Siga as etapas a seguir, para melhor experiencia do template.._
 1. Clone o projeto
    ```sh
    git clone https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez.git
+   ```
+   
+## :cofee: Para iniciar o projeto, siga estas etapas:
+
+
+_Siga as etapas a seguir, para melhor experiencia do template.._
+
+1. Clone o projeto:
+   ```npm
+   npm install
+   ```
+
+2. Qualquer mudança no scss do projeto rode: 
+   ```npm
+   gulp
    ```
    
 
