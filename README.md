@@ -2,7 +2,7 @@
 
 <span align="center">
 
-# SBM STARTER
+# SCALABRE STARTER BOILERPLATE
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -11,14 +11,14 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<h2>By <a href="https://www.linkedin.com/in/manrriquezs/">@Manrriquez</a></h2>
+<h2>By <a href="https://www.linkedin.com/in/manrriiquez/">@Manrriquez</a></h2>
 <br>
 </span>
 
 Um Template inicial baseado em projetos [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS), [Blocks, Elements and Modifiers](http://getbem.com/introduction/) (BEMCSS) e [Syntactically Awesome Style Sheets](https://sass-lang.com/) (SASS). Não importa o tamanho do seu projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
 e manutenção do seu código. 
 
-Os estilos são divididos nos seguintes grupos: **Base, Layout, Helpers, Modules, Responsive, States, , Utilities e Vendor**
+Os estilos são divididos nos seguintes grupos: **Base, Layout, Shame, Modules, Responsive, States, Utilities e Pages**
 
 ## Sobre o template
 
@@ -232,13 +232,13 @@ _Siga as etapas a seguir, para melhor experiencia do template.._
 
 1. Clone o projeto
    ```sh
-   git clone https://github.com/Manrriquez/sbm-starter.git
+   git clone https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez.git
    ```
    
 
 ## Bugs & Suporte
 
-Desenvolvido e estruturado por [@Manrriquez](https://www.linkedin.com/in/manrriquezs/). Por favor, caso aja algum erro ou bug, contate-me o mais breve possivel!
+Desenvolvido e estruturado por [@Manrriquez](https://www.linkedin.com/in/manrriiquez/). Por favor, caso aja algum erro ou bug, contate-me o mais breve possivel!
 
 ## Links de referência
 
@@ -260,25 +260,25 @@ Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.
 <!-- CONTACT -->
 ## Contato
 
-Luis Fernando - [@manrriquezs](https://www.linkedin.com/in/manrriquezs/) - manrriquez.contato@gmail.com
+Luis Fernando - [@manrriiquez](https://www.linkedin.com/in/manrriiquez/) - manrriquez.contato@gmail.com
 
-Project Link: [https://github.com/Manrriquez/sbm-starter](https://github.com/Manrriquez/sbm-starter)
+Project Link: [https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez](https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez)
 
 <p align="right">(<a href="#top">Subir</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Manrriquez/sbm-starter.svg?style=for-the-badge
-[contributors-url]: https://github.com/Manrriquez/sbm-starter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Manrriquez/sbm-starter.svg?style=for-the-badge
-[forks-url]: https://github.com/Manrriquez/sbm-starter/network/members
-[stars-shield]: https://img.shields.io/github/stars/Manrriquez/sbm-starter.svg?style=for-the-badge
-[stars-url]: https://github.com/Manrriquez/sbm-starter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Manrriquez/sbm-starter.svg?style=for-the-badge
-[issues-url]: https://github.com/Manrriquez/sbm-starter/issues
-[license-shield]: https://img.shields.io/github/license/Manrriquez/sbm-starter.svg?style=for-the-badge
-[license-url]: https://github.com/Manrriquez/sbm-starter/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Manrriquez/scalable-starter-boilerplate-manrriquez.svg?style=for-the-badge
+[contributors-url]: https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Manrriquez/scalable-starter-boilerplate-manrriquez.svg?style=for-the-badge
+[forks-url]: https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez/network/members
+[stars-shield]: https://img.shields.io/github/stars/Manrriquez/scalable-starter-boilerplate-manrriquez.svg?style=for-the-badge
+[stars-url]: https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Manrriquez/scalable-starter-boilerplate-manrriquez.svg?style=for-the-badge
+[issues-url]: https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez/issues
+[license-shield]: https://img.shields.io/github/license/Manrriquez/scalable-starter-boilerplate-manrriquez.svg?style=for-the-badge
+[license-url]: https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/manrriquezs/
+[linkedin-url]: https://www.linkedin.com/in/manrriiquez/
 [product-screenshot]: assets/img/screenshot.jpeg
