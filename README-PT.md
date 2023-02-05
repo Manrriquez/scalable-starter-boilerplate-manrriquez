@@ -24,8 +24,12 @@ Os estilos são divididos nos seguintes grupos: **Base, Layout, Shame, Modules, 
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+## Porque utilizar SMACSS ??
+_Scalabre and Modular Archtecture for CSS não é um framework, nem biblioteca, mas sim um guia para estruturar estilos de maneira inteligente
+e escalonánel. Não importa o tamanho do projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
+e manutenção do seu código._
 
-## Porque utilizar bootstrap da melhor forma ??
+## Como utilizar bootstrap da melhor forma ??
 _Bootstrap veio para o mercado como um framework CSS, focado em components, diferente do Tailwind no qual e utility first, focado em utilidades, dessa forma bootstrap vem pré-definido components, cores, fonts e estilos, muitos não sabem, mas o bootstrap oferece como download source files (arquivo fonte), para utilizar da sua forma._
 
 _É recomendado você apenas alterar o arquivo `_variables.scss`, pois da variables você pode ter autonomia de mudar por exemplo `text-primary`, `bg-secondary`, por cores da sua escolha, é uma imensidão de possibilidades de como personalizar o bootstrap ao seu gosto!_
@@ -102,29 +106,6 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
 }
 ```
 
-### Reescrevendo components da forma certa:
-_Sabe aquela coisa vergonhosa que vez em quando temos que realizar?. Seja um component realizado por você ou algo pronto do bootstrap?. Então este arquivo em especial e redirecionado para exatamente
-isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.scss` cumpre a promessa._
-
-
-1. Reescrevendo componente bootstrap:
-
-```scss
-.form {
-    border: none!important;
-
-    input:focus {
-        border-color: #86b7fe!important;
-    }
-
-}
-
-```
-## Porque utilizar SMACSS ??
-_Scalabre and Modular Archtecture for CSS não é um framework, nem biblioteca, mas sim um guia para estruturar estilos de maneira inteligente
-e escalonánel. Não importa o tamanho do projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
-e manutenção do seu código._
-
 ## Diretorio de estrutura
 
 ```
@@ -186,6 +167,58 @@ e manutenção do seu código._
 ├── LICENSE.txt
 ├── index.html
 
+```
+
+### Reescrevendo components da forma certa:
+_Sabe aquela coisa vergonhosa que vez em quando temos que realizar?. Seja um component realizado por você ou algo pronto do bootstrap?. Então este arquivo em especial e redirecionado para exatamente
+isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.scss` cumpre a promessa._
+
+
+1. Reescrevendo componente bootstrap:
+
+```scss
+.form {
+    border: none!important;
+
+    input:focus {
+        border-color: #86b7fe!important;
+    }
+
+}
+
+```
+
+## Libs
+
+# Slick Slider
+_Fazendo carrossel nunca mais será um problema
+Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada por [Ken Wheeler](http://smacss.com/) (atual diretor de open source na Formidable Labs, Inc) e que hoje já possui mais de 21000 estrelas no GitHub, torna o trabalho de criar um carrossel algo extremamente fácil. O melhor de tudo é que não precisamos abrir mão de flexibilidade e customização. Resumindo, ela nos ajuda sem nos prender a suas limitações._
+
+1. Criando um slider com slick:
+
+1.1 HTML
+```html
+<div class="carousel">
+  <div><img src="https://i.imgur.com/3aIutJi.png" alt="js" /></div>
+  <div><img src="https://i.imgur.com/rWtGeQ0.png" alt="java" /></div>
+  <div><img src="https://i.imgur.com/8946bSF.png" alt="python"/></div>
+  <div><img src="https://i.imgur.com/9Hc7hjb.png" alt="kotlin" /></div>
+  <div><img src="https://i.imgur.com/uZDEpjX.png" alt="scala" /></div>
+  <div><img src="https://i.imgur.com/eQoyQjy.png" alt="C#" /></div>
+  <div><img src="https://i.imgur.com/ko3iAbu.png" alt="PHP" /></div>
+  <div><img src="https://i.imgur.com/Afkz5od.png" alt="dotnet" /></div>
+</div>
+```
+
+1.2 JS
+```js
+$('.carousel').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+});
 ```
 
 ## :rocket: Para instalar o projeto, siga estas etapas:
