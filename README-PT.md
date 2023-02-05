@@ -89,6 +89,7 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
 </section> 
 
 ```
+
 ```scss
 .home {
   &__box {
@@ -98,6 +99,24 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
       padding: 15px;
     }
   }
+}
+```
+
+### Reescrevendo components da forma certa:
+_Sabe aquela coisa vergonhosa que vez em quando temos que realizar?. Seja um component realizado por você ou algo pronto do bootstrap?. Então este arquivo em especial e redirecionado para exatamente
+isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.scss` cumpre a promessa._
+
+
+1. Reescrevendo componente bootstrap:
+
+```scss
+.form {
+    border: none!important;
+
+    input:focus {
+        border-color: #86b7fe!important;
+    }
+
 }
 
 ```
@@ -179,17 +198,17 @@ _Siga as etapas a seguir, para melhor experiencia do template.._
    git clone https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez.git
    ```
    
-## :cofee: Para iniciar o projeto, siga estas etapas:
+## :wrench: Para iniciar o projeto, siga estas etapas:
 
 
 _Siga as etapas a seguir, para melhor experiencia do template.._
 
-1. Clone o projeto:
+1. Baixe as dependências necessárias:
    ```npm
    npm install
    ```
 
-2. Qualquer mudança no scss do projeto rode: 
+2. Qualquer mudança no scss do projeto digite no terminal na raiz do projeto: 
    ```npm
    gulp
    ```
