@@ -15,23 +15,24 @@
 <br>
 </span>
 
-Um Template inicial baseado em projetos [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS), [Blocks, Elements and Modifiers](http://getbem.com/introduction/) (BEMCSS) e [Syntactically Awesome Style Sheets](https://sass-lang.com/) (SASS). Não importa o tamanho do seu projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
-e manutenção do seu código. 
+Initial Template based on the [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS), [Blocks, Elements and Modifiers](http://getbem.com/introduction/) (BEMCSS), and [Syntactically Awesome Style Sheets](https://sass-lang.com/) (SASS) projects. Regardless of the size of your project, this organization pattern combined with BEM can further streamline and speed up the development and maintenance of your code.
 
-Os estilos são divididos nos seguintes grupos: **Base, Layout, Shame, Modules, Responsive, States, Utilities e Pages**
+Styles are divided into the following groups: **Base, Layout, Shame, Modules, Responsive, States, Utilities e Pages**
 
-## Sobre o template
+## About the template
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+## Why use SMACSS ??
+_[Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS), It is not a framework or library, but rather a guide to structure styles in an intelligent and scalable way. Regardless of the size of the project, this organizational pattern combined with BEM can further streamline and speed up the development and maintenance of your code._
 
-## Porque utilizar bootstrap da melhor forma ??
-_Bootstrap veio para o mercado como um framework CSS, focado em components, diferente do Tailwind no qual e utility first, focado em utilidades, dessa forma bootstrap vem pré-definido components, cores, fonts e estilos, muitos não sabem, mas o bootstrap oferece como download source files (arquivo fonte), para utilizar da sua forma._
+## How to best use Bootstrap?
+_Bootstrap entered the market as a CSS framework, focused on components, unlike Tailwind, which is utility-first, focused on utilities. This way, Bootstrap comes pre-defined with components, colors, fonts, and styles. Many don't know, but Bootstrap offers source files for download to be used in your own way._
 
-_É recomendado você apenas alterar o arquivo `_variables.scss`, pois da variables você pode ter autonomia de mudar por exemplo `text-primary`, `bg-secondary`, por cores da sua escolha, é uma imensidão de possibilidades de como personalizar o bootstrap ao seu gosto!_
+_It is recommended that you only change the `_variables.scss` file, as from the variables you can have the autonomy to change, for example, `text-primary`, `bg-secondary` to colors of your choice. There are countless possibilities for how to customize Bootstrap to your liking!_
 
-#### Como padrão bootstrap/sass default:
-_Como padrão do bootstrap ele vem setado dessa forma, assim cada componente seja guidado por estas variaveis, mas e se pudessemos alterar da nossa forma?_
+#### As the default Bootstrap/Sass standard:
+_As a standard of Bootstrap, it comes set in this way, so that each component is guided by these variables. But what if we could change it in our own way?_
 
 ```scss
 // Variables
@@ -51,8 +52,8 @@ $dark:          $gray-900 !default;
 ```
 
 
-#### Após alterar o  `_variables.scss`:
-_Após alterar a variavel `$primary` com `#e6381f` toda vez que você chamar uma classe pré-definida com `primary` por exemplo `text-primary`, `bg-primary` ele irá chamar por padrão o o color hexadecimal que setamos como `#e6381f`, isso vale tanto para cores, fonts, tamanhos etc.. As possibilidaes são inumeras!!_
+#### After changing the `_variables.scss` file:
+_After changing the `$primary` variable to `#e6381f`, every time you call a pre-defined class such as `text-primary` or `bg-primary`, it will automatically use the hexadecimal color we set to `#e6381f` by default. This applies to colors, fonts, sizes, etc. The possibilities are endless!_
 
 ```scss
 // Variables
@@ -65,14 +66,12 @@ $primary:       #e6381f !default;
 ```
 
 
-## Porque utilizar BEM com Bootstrap ??
-_Block Element Modifier é um padrão de nomenclatura para seletores CSS, criado por desenvolvedores da Yandex. Facilita a compreensão da função
-de um determinado seletor CSS, simplismente analisando o nome desse seletor. Otimo para quem trabalha em times. Manuntenção facilitada mesmo depois
-de muito tempo sem contato com o código. Pequenas mudanças não alteram o que já está implementado, diminuindo a chance de BUGs._
+## Why use BEM with Bootstrap?
+_The Block Element Modifier (BEM) is a naming convention for CSS selectors created by Yandex developers. It makes it easy to understand the function of a certain CSS selector simply by analyzing its name. Great for team work. Maintenance is facilitated even after a long time without contact with the code. Small changes do not affect what has already been implemented, reducing the chance of bugs._
 
-_Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tudo todavia, há casos que realmente o bootstrap não poderá dar conta e partiremos para o sass, e dessa forma aproveitamos utilizar o BEM, padronizando essas `exceções` assim trazendo consigo um codigo intuitivo e padronizado!_
+_The purpose of using Bootstrap is to use as little Sass as possible, but still have everything available. However, there are cases where Bootstrap will not be enough and we will have to use Sass. By doing this, we can take advantage of using BEM, standardizing these `exceptions` and bringing an intuitive and standardized code._
 
-#### Exemplo abaixo utilizando Bem juntamente bom bootstrap:
+#### Example below using BEM in conjunction with Bootstrap:
 ```html
 <section class="home">
    <div class="container">
@@ -80,7 +79,7 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
         <div class="col-12">
            <div class="home__box">
               <div class="home__box__content">
-                   <h1>Olá,sou Fulano!</h1>
+                   <h1>Hello World</h1>
               </div>
            </div>
         </div>
@@ -89,6 +88,7 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
 </section> 
 
 ```
+
 ```scss
 .home {
   &__box {
@@ -99,131 +99,148 @@ _Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tud
     }
   }
 }
-
 ```
-## Porque utilizar SMACSS ??
-_Scalabre and Modular Archtecture for CSS não é um framework, nem biblioteca, mas sim um guia para estruturar estilos de maneira inteligente
-e escalonánel. Não importa o tamanho do projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
-e manutenção do seu código._
 
-## Diretorio de estrutura
+## Directory Structure
 
 ```
 ┌── .gitignore
 ├── assets
 │   ├── img
 │   ├── js
-│   ├── scss
+│   ├── sass
 │        ├── base
-│        │   ├── _containers.scss
-│        │   ├── _grid.scss
-│        │   ├── _reboot.scss
+│        │   ├── _base.scss
 │        │   ├── _root.scss
-│        │   ├── _variables.scss
-│        │   └── _bootstrap-grid.scss
-│        │
-│        ├── helpers
-│        │   ├── _clearfix.scss
-│        │   ├── _colored-links.scss
-│        │   ├── _position.scss
-│        │   ├── _ratio.scss
-│        │   ├── _streched-link.scss
-│        │   ├── _text-truncation.scss
-│        │   ├── _visually-hidden.scss
-│        │   └── _helpers.scss
+│        │   └── _index.scss
 │        │
 │        ├── layout
-│        │   ├── _nav.scss
-│        │   ├── _navbar.scss
+│        │   ├── _header.scss
+│        │   ├── _footer.scss
 │        │   ├── _main.scss
-│        │   └── _footer.scss
+│        │   └── _index.scss
+│        │
+│        ├── pages
+│        │   ├── _home.scss
+│        │   ├── _privacy-policy.scss
+│        │   ├── _use-cockies.scss
+│        │   └── _index.scss
 │        │
 │        ├── modules
-│        │   ├── form
-│        │   │   ├── _floating-labels.scss
-│        │   │   ├── _form-check.scss
-│        │   │   ├── _form-control.scss
-│        │   │   ├── _form-range.scss
-│        │   │   ├── _form-select.scss
-│        │   │   ├── _form-text.scss
-│        │   │   ├── _input-group.scss
-│        │   │   ├── _labels.scss
-│        │   │   └── _validation.scss
+│        │   ├── components
+│        │   │   ├── _boxes.scss
+│        │   │   ├── _buttons.scss
 │        │   │   
-│        │   ├── _accordion.scss
-│        │   ├── _alert.scss
-│        │   ├── _badge.scss
-│        │   ├── _breadcrumb.scss
-│        │   ├── _button-group.scss
-│        │   ├── _buttons.scss
-│        │   ├── _card.scss
-│        │   ├── _carousel.scss
-│        │   ├── _close.scss
-│        │   ├── _dropdown.scss
-│        │   ├── _forms.scss
-│        │   ├── _images.scss
-│        │   ├── _list-group.scss
-│        │   ├── _modal.scss
-│        │   ├── _buttons.scss
-│        │   ├── _offcanvas.scss
-│        │   ├── _pagination.scss
-│        │   ├── _popover.scss
-│        │   ├── _progress.scss
-│        │   ├── _spinners.scss
-│        │   ├── _tables.scss
-│        │   ├── _toasts.scss
-│        │   ├── _tooltip.scss
-│        │   ├── _transition.scss
-│        │   └── _type.scss
+│        │   └── _index.scss
 │        │
 │        ├── states
-│        │   └── _states.scss
+│        │   └── _boxes.scss
+│        │   ├── _list.scss
+│        │   ├── _index.scss
 │        │
 │        ├── utilities
-│        │   ├── functions
-│        │   │   └── _functions.scss
-│        │   │
-│        │   ├── mixins
-│        │   │   ├── _alert.scss
-│        │   │   ├── _border-radius.scss
-│        │   │   ├── _box-shadow.scss
-│        │   │   ├── _breakpoints.scss
-│        │   │   ├── _buttons.scss
-│        │   │   ├── _claret.scss
-│        │   │   ├── _clearfix.scss
-│        │   │   ├── _color-scheme.scss
-│        │   │   ├── _container.scss
-│        │   │   ├── _deprecate.scss
-│        │   │   ├── _forms.scss
-│        │   │   ├── _gradient.scss
-│        │   │   ├── _grid.scss
-│        │   │   ├── _image.scss
-│        │   │   ├── _list-group.scss
-│        │   │   ├── _list.scss
-│        │   │   ├── _pagination.scss
-│        │   │   ├── _reset-text.scss
-│        │   │   ├── _resize.scss
-│        │   │   ├── _table-variants.scss
-│        │   │   ├── _text-truncate.scss
-│        │   │   ├── _transition.scss
-│        │   │   ├── _utilities.scss
-│        │   │   ├── _visually-hidden.scss
-│        │   │   └── _mixins.scss
-│        │   │
-│        │   ├── _api.scss
+│        │   ├── _keyframes.scss
+│        │   ├── _transforms.scss
+│        │   ├── _transitions.scss
 │        │   └── _utilities.scss
 │        │   
-│        ├── vendor
-│        │   └── _rfs.scss
+│        ├── responsive
+│        │   ├── _tablet.scss
+│        │   ├── _mobile.scss
+│        │   └── _index.scss
+│        │
+│        ├── shame
+│        │   └── _overrides.scss
 │        │ 
-│        ├── bootstrap.scss
 │        ├── main.scss
 │
 ├── README.md
+├── README-PT.md
+├── .gitignore
+├── .gulpfile.js
+├── package.json
 ├── LICENSE.txt
 ├── index.html
 
 ```
+
+### Reescrevendo components da forma certa:
+_Sabe aquela coisa vergonhosa que vez em quando temos que realizar?. Seja um component realizado por você ou algo pronto do bootstrap?. Então este arquivo em especial e redirecionado para exatamente
+isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.scss` cumpre a promessa._
+
+
+1. Reescrevendo componente bootstrap:
+
+```scss
+.form {
+    border: none!important;
+
+    input:focus {
+        border-color: #86b7fe!important;
+    }
+
+}
+
+```
+
+# Libs
+_Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema e seus exemplos de como utiliza-lo, que iram influenciar no desenvolvimento do seu projeto._
+
+
+### Slick Slider
+_Fazendo carrossel nunca mais será um problema
+Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada por [Ken Wheeler](http://kenwheeler.github.io/) (atual diretor de open source na Formidable Labs, Inc) e que hoje já possui mais de 21000 estrelas no GitHub, torna o trabalho de criar um carrossel algo extremamente fácil. O melhor de tudo é que não precisamos abrir mão de flexibilidade e customização. Resumindo, ela nos ajuda sem nos prender a suas limitações._
+
+1. Criando um slider com slick:
+
+1.1
+```html
+<div class="carousel">
+  <div><img src="https://i.imgur.com/3aIutJi.png" alt="js" /></div>
+  <div><img src="https://i.imgur.com/rWtGeQ0.png" alt="java" /></div>
+  <div><img src="https://i.imgur.com/8946bSF.png" alt="python"/></div>
+  <div><img src="https://i.imgur.com/9Hc7hjb.png" alt="kotlin" /></div>
+  <div><img src="https://i.imgur.com/uZDEpjX.png" alt="scala" /></div>
+  <div><img src="https://i.imgur.com/eQoyQjy.png" alt="C#" /></div>
+  <div><img src="https://i.imgur.com/ko3iAbu.png" alt="PHP" /></div>
+  <div><img src="https://i.imgur.com/Afkz5od.png" alt="dotnet" /></div>
+</div>
+```
+
+1.2
+```js
+$('.carousel').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+});
+```
+
+### AOS Animation
+_[AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca que permite aplicar diferentes tipos de animações on scroll aos elementos (blocos, imagens, …) que compõem o seu site._
+
+1. Criando e ativando animações com AOS:
+
+1.1
+```html
+<div class="item" data-aos="fade-up">fade-up</div>
+<div class="item" data-aos="fade-down">fade-down</div>
+<div class="item" data-aos="zoom-in">zoom-in</div>
+<div class="item" data-aos="zoom-out">zoom-out</div>
+<div class="item" data-aos="slide-up">slide-up</div>
+<div class="item" data-aos="flip-right">flip-right</div>
+<div class="item" data-aos="flip-left">flip-left</div>
+```
+
+1.2
+```html
+<script> 
+    AOS.init(); 
+<script>
+```
+
 
 ## :rocket: Para instalar o projeto, siga estas etapas:
 
@@ -233,6 +250,21 @@ _Siga as etapas a seguir, para melhor experiencia do template.._
 1. Clone o projeto
    ```sh
    git clone https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez.git
+   ```
+   
+## :wrench: Para iniciar o projeto, siga estas etapas:
+
+
+_Siga as etapas a seguir, para melhor experiencia do template.._
+
+1. Baixe as dependências necessárias:
+   ```npm
+   npm install
+   ```
+
+2. Qualquer mudança no scss do projeto digite no terminal na raiz do projeto: 
+   ```npm
+   gulp
    ```
    
 
@@ -248,7 +280,8 @@ Links de referencia utilizados para estruturar este template, aonde foi tudo pos
 - [SASS](https://sass-lang.com/)
 - [Scalable and Modular Architecture for CSS](http://smacss.com/book) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
 - [BEM](http://getbem.com/introduction/)
-
+- [SLICK SLIDER](https://imasters.com.br/front-end/slick-js-fazer-um-carrossel-nunca-foi-tao-facil)
+- [AOS ANIMATE](https://michalsnik.github.io/aos/)
 
 <!-- LICENSE -->
 ## License
