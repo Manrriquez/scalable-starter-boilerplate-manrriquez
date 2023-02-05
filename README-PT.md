@@ -188,15 +188,17 @@ isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.s
 
 ```
 
-## Libs
+# Libs
+_Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema, que influenciam no desenvolvimento do seu projeto._
 
-# Slick Slider
+
+### Slick Slider
 _Fazendo carrossel nunca mais será um problema
-Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada por [Ken Wheeler](http://smacss.com/) (atual diretor de open source na Formidable Labs, Inc) e que hoje já possui mais de 21000 estrelas no GitHub, torna o trabalho de criar um carrossel algo extremamente fácil. O melhor de tudo é que não precisamos abrir mão de flexibilidade e customização. Resumindo, ela nos ajuda sem nos prender a suas limitações._
+Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada por [Ken Wheeler](http://kenwheeler.github.io/) (atual diretor de open source na Formidable Labs, Inc) e que hoje já possui mais de 21000 estrelas no GitHub, torna o trabalho de criar um carrossel algo extremamente fácil. O melhor de tudo é que não precisamos abrir mão de flexibilidade e customização. Resumindo, ela nos ajuda sem nos prender a suas limitações._
 
 1. Criando um slider com slick:
 
-1.1 HTML
+1.1
 ```html
 <div class="carousel">
   <div><img src="https://i.imgur.com/3aIutJi.png" alt="js" /></div>
@@ -210,7 +212,7 @@ Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada po
 </div>
 ```
 
-1.2 JS
+1.2
 ```js
 $('.carousel').slick({
   dots: true,
@@ -220,6 +222,30 @@ $('.carousel').slick({
   slidesToScroll: 4,
 });
 ```
+
+### AOS Animation
+_ [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca que permite aplicar diferentes tipos de animações on scroll aos elementos (blocos, imagens, …) que compõem o seu site._
+
+1. Criando e ativando animações com AOS:
+
+1.1
+```html
+<div class="item" data-aos="fade-up">fade-up</div>
+<div class="item" data-aos="fade-down">fade-down</div>
+<div class="item" data-aos="zoom-in">zoom-in</div>
+<div class="item" data-aos="zoom-out">zoom-out</div>
+<div class="item" data-aos="slide-up">slide-up</div>
+<div class="item" data-aos="flip-right">flip-right</div>
+<div class="item" data-aos="flip-left">flip-left</div>
+```
+
+1.2
+```html
+<script> 
+    AOS.init(); 
+<script>
+```
+
 
 ## :rocket: Para instalar o projeto, siga estas etapas:
 
