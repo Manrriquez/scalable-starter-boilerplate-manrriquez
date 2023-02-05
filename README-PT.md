@@ -189,7 +189,7 @@ isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.s
 ```
 
 # Libs
-_Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema, que influenciam no desenvolvimento do seu projeto._
+_Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema e seus exemplos de como utiliza-lo, que iram influenciar no desenvolvimento do seu projeto._
 
 
 ### Slick Slider
@@ -224,7 +224,7 @@ $('.carousel').slick({
 ```
 
 ### AOS Animation
-_ [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca que permite aplicar diferentes tipos de animações on scroll aos elementos (blocos, imagens, …) que compõem o seu site._
+_[AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca que permite aplicar diferentes tipos de animações on scroll aos elementos (blocos, imagens, …) que compõem o seu site._
 
 1. Criando e ativando animações com AOS:
 
@@ -285,7 +285,8 @@ Links de referencia utilizados para estruturar este template, aonde foi tudo pos
 - [SASS](https://sass-lang.com/)
 - [Scalable and Modular Architecture for CSS](http://smacss.com/book) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
 - [BEM](http://getbem.com/introduction/)
-
+- [SLICK SLIDER](https://imasters.com.br/front-end/slick-js-fazer-um-carrossel-nunca-foi-tao-facil)
+- [AOS ANIMATE](https://michalsnik.github.io/aos/)
 
 <!-- LICENSE -->
 ## License
