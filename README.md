@@ -26,6 +26,41 @@ Styles are divided into the following groups: **Base, Layout, Shame, Modules, Re
 ## Why use SMACSS ??
 _[Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS), It is not a framework or library, but rather a guide to structure styles in an intelligent and scalable way. Regardless of the size of the project, this organizational pattern combined with BEM can further streamline and speed up the development and maintenance of your code._
 
+## Why use BEM with Bootstrap?
+_The Block Element Modifier (BEM) is a naming convention for CSS selectors created by Yandex developers. It makes it easy to understand the function of a certain CSS selector simply by analyzing its name. Great for team work. Maintenance is facilitated even after a long time without contact with the code. Small changes do not affect what has already been implemented, reducing the chance of bugs._
+
+_The purpose of using Bootstrap is to use as little Sass as possible, but still have everything available. However, there are cases where Bootstrap will not be enough and we will have to use Sass. By doing this, we can take advantage of using BEM, standardizing these `exceptions` and bringing an intuitive and standardized code._
+
+#### Example below using BEM in conjunction with Bootstrap:
+```html
+<section class="home">
+   <div class="container">
+     <div class="row">
+        <div class="col-12">
+           <div class="home__box">
+              <div class="home__box__content">
+                   <h1>Hello World</h1>
+              </div>
+           </div>
+        </div>
+      </div>
+   </div>
+</section> 
+
+```
+
+```scss
+.home {
+  &__box {
+    box-shadow: 0 1px 2px rgb(223 3 3 / 50%);
+    
+    &__content {
+      padding: 15px;
+    }
+  }
+}
+```
+
 ## How to best use Bootstrap?
 _Bootstrap entered the market as a CSS framework, focused on components, unlike Tailwind, which is utility-first, focused on utilities. This way, Bootstrap comes pre-defined with components, colors, fonts, and styles. Many don't know, but Bootstrap offers source files for download to be used in your own way._
 
@@ -63,42 +98,6 @@ _After changing the `$primary` variable to `#e6381f`, every time you call a pre-
 $primary:       #e6381f !default;
 // scss-docs-end theme-color-variables
 
-```
-
-
-## Why use BEM with Bootstrap?
-_The Block Element Modifier (BEM) is a naming convention for CSS selectors created by Yandex developers. It makes it easy to understand the function of a certain CSS selector simply by analyzing its name. Great for team work. Maintenance is facilitated even after a long time without contact with the code. Small changes do not affect what has already been implemented, reducing the chance of bugs._
-
-_The purpose of using Bootstrap is to use as little Sass as possible, but still have everything available. However, there are cases where Bootstrap will not be enough and we will have to use Sass. By doing this, we can take advantage of using BEM, standardizing these `exceptions` and bringing an intuitive and standardized code._
-
-#### Example below using BEM in conjunction with Bootstrap:
-```html
-<section class="home">
-   <div class="container">
-     <div class="row">
-        <div class="col-12">
-           <div class="home__box">
-              <div class="home__box__content">
-                   <h1>Hello World</h1>
-              </div>
-           </div>
-        </div>
-      </div>
-   </div>
-</section> 
-
-```
-
-```scss
-.home {
-  &__box {
-    box-shadow: 0 1px 2px rgb(223 3 3 / 50%);
-    
-    &__content {
-      padding: 15px;
-    }
-  }
-}
 ```
 
 ## Directory Structure
@@ -164,12 +163,12 @@ _The purpose of using Bootstrap is to use as little Sass as possible, but still 
 
 ```
 
-### Reescrevendo components da forma certa:
-_Sabe aquela coisa vergonhosa que vez em quando temos que realizar?. Seja um component realizado por você ou algo pronto do bootstrap?. Então este arquivo em especial e redirecionado para exatamente
-isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.scss` cumpre a promessa._
+### Rewriting components the right way:
+
+_Do you know that embarrassing thing we have to do sometimes? Be it a component created by you or something ready from bootstrap? Well, this file in particular is directed towards exactly this! The infamous and controversial `!important`, and for this the `_overrides.scss` fulfills its promise._
 
 
-1. Reescrevendo componente bootstrap:
+1. Rewriting Bootstrap component:
 
 ```scss
 .form {
@@ -183,15 +182,49 @@ isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.s
 
 ```
 
+
+### Gulp:
+_Using Gulp saves a lot of time. `By using Gulp, you will no longer perform tedious tasks that have become the responsibility of your Operating System`, such as: Compiling Sass files to CSS. Concatenation (combination) of several JavaScript files, file renaming, file minification, and a sea of possibilities for you to venture into!_
+
+
+1. Examples of production and development tasks and when to use them:
+
+1.1 Development task, should be used in the development environment for testing, refactoring, where this task has the goal of expanding the minified file for better readability, in the moment of finding that notorious bug!.
+```js
+// To run this task, type the following in the root project terminal: 'gulp sassdev'
+gulp.task('sassdev', function() {
+  return gulp.src(scssFiles)
+    .pipe(sass(sassDevOptions).on('error', sass.logError))
+    .pipe(gulp.dest(cssDest));
+});
+
+```
+
+1.2 Development task should be used during the development stage for testing, refactoring, with the aim of expanding the minified file for better readability when finding a bug.
+Production task should be used at the decisive moment when we are about to make the final release, for whichever server it may be. This task has the goal of minifying the file, converting Sass to CSS. That's right, you read that correctly, small dev! No more tedious tasks, leave it to Gulp to handle it for you. Beyond just minifying and converting, it redirects the minified and converted file to the css/main.css folder, isn't that wonderful!
+
+```js
+// To run this task, type the following in the root project terminal: 'gulp sassprod'
+
+gulp.task('sassprod', function() {
+  return gulp.src(scssFiles)
+    .pipe(sass(sassProdOptions).on('error', sass.logError))
+    .pipe(rename('main.min.css'))
+    .pipe(gulp.dest(cssDest));
+});
+
+```
+
+
 # Libs
-_Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema e seus exemplos de como utiliza-lo, que iram influenciar no desenvolvimento do seu projeto._
+_Here I present you some pre-configured libraries starting from this template, below I highlight the main `libraries` of this theme and their examples of how to use them, which will influence the development of your project.._
 
 
 ### Slick Slider
-_Fazendo carrossel nunca mais será um problema
-Essa pequena biblioteca open source (disponibilizada sob licença MIT) criada por [Ken Wheeler](http://kenwheeler.github.io/) (atual diretor de open source na Formidable Labs, Inc) e que hoje já possui mais de 21000 estrelas no GitHub, torna o trabalho de criar um carrossel algo extremamente fácil. O melhor de tudo é que não precisamos abrir mão de flexibilidade e customização. Resumindo, ela nos ajuda sem nos prender a suas limitações._
+_Making a carousel will never be a problem again
+This small open source library (made available under the MIT license) created by [Ken Wheeler](http://kenwheeler.github.io/) (current director of open source at Formidable Labs, Inc) and now has over 21,000 stars on GitHub, makes creating a carousel extremely easy. The best part is that we don't have to sacrifice flexibility and customization. In short, it helps us without limiting us._
 
-1. Criando um slider com slick:
+1. create with slider and slick:
 
 1.1
 ```html
@@ -219,9 +252,9 @@ $('.carousel').slick({
 ```
 
 ### AOS Animation
-_[AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca que permite aplicar diferentes tipos de animações on scroll aos elementos (blocos, imagens, …) que compõem o seu site._
+_[AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) is a library that allows you to apply different types of animations on scroll to the elements (blocks, images, etc.) that make up your website._
 
-1. Criando e ativando animações com AOS:
+1. Creating and activating animations with AOS:
 
 1.1
 ```html
@@ -242,27 +275,27 @@ _[AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) é uma biblioteca 
 ```
 
 
-## :rocket: Para instalar o projeto, siga estas etapas:
+## :rocket: To install the project, follow these steps:
 
 
-_Siga as etapas a seguir, para melhor experiencia do template.._
+_Follow the steps below for the best template experience:_
 
-1. Clone o projeto
+1. Clone the project:
    ```sh
    git clone https://github.com/Manrriquez/scalable-starter-boilerplate-manrriquez.git
    ```
    
-## :wrench: Para iniciar o projeto, siga estas etapas:
+## :wrench: Follow these steps to start the project:
 
 
-_Siga as etapas a seguir, para melhor experiencia do template.._
+_Follow the steps below for the best template experience_
 
-1. Baixe as dependências necessárias:
+1. Download the necessary dependencies:
    ```npm
    npm install
    ```
 
-2. Qualquer mudança no scss do projeto digite no terminal na raiz do projeto: 
+2. Any changes in the project scss, type in the terminal at the root of the project: 
    ```npm
    gulp
    ```
@@ -270,11 +303,11 @@ _Siga as etapas a seguir, para melhor experiencia do template.._
 
 ## Bugs & Suporte
 
-Desenvolvido e estruturado por [@Manrriquez](https://www.linkedin.com/in/manrriiquez/). Por favor, caso aja algum erro ou bug, contate-me o mais breve possivel!
+Developed and structured by [@Manrriquez](https://www.linkedin.com/in/manrriiquez/). If there are any errors or bugs, please contact me as soon as possible.
 
-## Links de referência
+## Reference links
 
-Links de referencia utilizados para estruturar este template, aonde foi tudo possivel.
+Reference links used to structure this template, where everything was possible.
 
 - [BOOTSTRAP](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [SASS](https://sass-lang.com/)
@@ -286,12 +319,12 @@ Links de referencia utilizados para estruturar este template, aonde foi tudo pos
 <!-- LICENSE -->
 ## License
 
-Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.
 
+Distributed under the MIT license. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contato
+## Contact
 
 Luis Fernando - [@manrriiquez](https://www.linkedin.com/in/manrriiquez/) - manrriquez.contato@gmail.com
 

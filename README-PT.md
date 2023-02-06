@@ -189,36 +189,6 @@ isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.s
 
 ```
 
-### Gulp:
-_O Gulp economiza muito tempo. `Ao usar o Gulp, você deixará de realizar tarefas tediosas, que passaram a ser de responsabilidade do seu Sistema Operacional`, como: Compilação de arquivos Sass para Css. Concatenação (combinação) de vários arquivos javaScript 5, renomeação de arquivos, minificação de arquivos e um mar de possibilidades para você se aventurar!._
-
-
-1. Exemplos de task produção e development e quando utiliza-las:
-
-1.1 task de desenvolvimento, devemos utilizar para em ambiente de desenvolvimento `testes`, `refatoração`, na onde esta task, tem como objetivo `expandir` o arquivo `minificado`, para sua melhor legibilidade, naquele momento de encontrar aquele famigerado bug!.
-```js
-// Task 'sassdev' - para todar esta task digite no terminal da raiz do projeto: 'gulp sassdev'
-gulp.task('sassdev', function() {
-  return gulp.src(scssFiles)
-    .pipe(sass(sassDevOptions).on('error', sass.logError))
-    .pipe(gulp.dest(cssDest));
-});
-
-```
-
-1.2 task de produção, devemos utilizar naquele momento decisivo no qual iremos realizar aquela chamada `benção` codinome `deploy`, para seja lá qual for seu servidor, na onde esta task tem como objetivo `minificar` o arquivo, mas além disto, converter `sass` para `css`, **ISSO MESMO QUE VOCÊ LEU PEQUENO GAFANHOTO DEV!!!**. chega de realizar tarefas tediosas **PODE DEIXAR QUE O GULP REALIZA PARA VOCÊ!**, muito além de apenas minificar e converter, ele redireciona o nosso arquivo `minificado` e `convertido` para a pasta de `css/main.css`, olha so que maravilha!!
-
-```js
-// Task 'sassdev' - para todar esta task digite no terminal da raiz do projeto: 'gulp sassprod'
-gulp.task('sassprod', function() {
-  return gulp.src(scssFiles)
-    .pipe(sass(sassProdOptions).on('error', sass.logError))
-    .pipe(rename('main.min.css'))
-    .pipe(gulp.dest(cssDest));
-});
-
-```
-
 # Libs
 _Aqui lhes apresento algumas `lib's` pré-configuradas apartir deste template, abaixo deixo em destaque lib's principais deste tema e seus exemplos de como utiliza-lo, que iram influenciar no desenvolvimento do seu projeto._
 
