@@ -29,6 +29,45 @@ _Scalabre and Modular Archtecture for CSS não é um framework, nem biblioteca, 
 e escalonánel. Não importa o tamanho do projeto, esse padrão de organização combinado com o BEM pode facilitar e agilizar ainda mais o desenvolvimento
 e manutenção do seu código._
 
+## Porque utilizar BEM com Bootstrap ??
+_Block Element Modifier é um padrão de nomenclatura para seletores CSS, criado por desenvolvedores da Yandex. Facilita a compreensão da função
+de um determinado seletor CSS, simplismente analisando o nome desse seletor. Otimo para quem trabalha em times. Manuntenção facilitada mesmo depois
+de muito tempo sem contato com o código. Pequenas mudanças não alteram o que já está implementado, diminuindo a chance de BUGs._
+
+_Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tudo todavia, há casos que realmente o bootstrap não poderá dar conta e partiremos para o sass, e dessa forma aproveitamos utilizar o BEM, padronizando essas `exceções` assim trazendo consigo um codigo intuitivo e padronizado!_
+
+#### Exemplo abaixo utilizando Bem juntamente bom bootstrap:
+```html
+<section class="home">
+   <div class="container">
+     <div class="row">
+        <div class="col-12">
+           <div class="home__box my-3 mx-4">
+              <div class="home__box__content">
+                   <h1 class="home__box__content--title text-white fw-bold fs-3 text-uppercase">Olá,sou Fulano!</h1>
+                   <p class="home__box__content--description text-white fw-bold fs-3 text-uppercase">Sou apenas um mero exemplo em busca de algum sentido em meio há tantos codigos..</p>
+              </div>
+           </div>
+        </div>
+      </div>
+   </div>
+</section> 
+
+```
+
+```scss
+.home {
+  &__box {
+    box-shadow: 0 1px 2px rgb(223 3 3 / 50%);
+    
+    &__content {
+      padding: 15px;
+    }
+  }
+}
+```
+
+
 ## Como utilizar bootstrap da melhor forma ??
 _Bootstrap veio para o mercado como um framework CSS, focado em components, diferente do Tailwind no qual e utility first, focado em utilidades, dessa forma bootstrap vem pré-definido components, cores, fonts e estilos, muitos não sabem, mas o bootstrap oferece como download source files (arquivo fonte), para utilizar da sua forma._
 
@@ -66,44 +105,6 @@ _Após alterar a variavel `$primary` com `#e6381f` toda vez que você chamar uma
 $primary:       #e6381f !default;
 // scss-docs-end theme-color-variables
 
-```
-
-
-## Porque utilizar BEM com Bootstrap ??
-_Block Element Modifier é um padrão de nomenclatura para seletores CSS, criado por desenvolvedores da Yandex. Facilita a compreensão da função
-de um determinado seletor CSS, simplismente analisando o nome desse seletor. Otimo para quem trabalha em times. Manuntenção facilitada mesmo depois
-de muito tempo sem contato com o código. Pequenas mudanças não alteram o que já está implementado, diminuindo a chance de BUGs._
-
-_Intuito utilizando bootstrap, e utilizar o minimo possivel de sass, mas com tudo todavia, há casos que realmente o bootstrap não poderá dar conta e partiremos para o sass, e dessa forma aproveitamos utilizar o BEM, padronizando essas `exceções` assim trazendo consigo um codigo intuitivo e padronizado!_
-
-#### Exemplo abaixo utilizando Bem juntamente bom bootstrap:
-```html
-<section class="home">
-   <div class="container">
-     <div class="row">
-        <div class="col-12">
-           <div class="home__box">
-              <div class="home__box__content">
-                   <h1>Olá,sou Fulano!</h1>
-              </div>
-           </div>
-        </div>
-      </div>
-   </div>
-</section> 
-
-```
-
-```scss
-.home {
-  &__box {
-    box-shadow: 0 1px 2px rgb(223 3 3 / 50%);
-    
-    &__content {
-      padding: 15px;
-    }
-  }
-}
 ```
 
 ## Diretorio de estrutura
@@ -185,6 +186,36 @@ isto! os tão famigerados e polêmicos `!important`, e para isto o `_overrides.s
     }
 
 }
+
+```
+
+### Gulp:
+_O Gulp economiza muito tempo. `Ao usar o Gulp, você deixará de realizar tarefas tediosas, que passaram a ser de responsabilidade do seu Sistema Operacional`, como: Compilação de arquivos Sass para Css. Concatenação (combinação) de vários arquivos javaScript 5, renomeação de arquivos, minificação de arquivos e um mar de possibilidades para você se aventurar!._
+
+
+1. Exemplos de task produção e development e quando utiliza-las:
+
+1.1 task de desenvolvimento, devemos utilizar para em ambiente de desenvolvimento `testes`, `refatoração`, na onde esta task, tem como objetivo `expandir` o arquivo `minificado`, para sua melhor legibilidade, naquele momento de encontrar aquele famigerado bug!.
+```js
+// Task 'sassdev' - para todar esta task digite no terminal da raiz do projeto: 'gulp sassdev'
+gulp.task('sassdev', function() {
+  return gulp.src(scssFiles)
+    .pipe(sass(sassDevOptions).on('error', sass.logError))
+    .pipe(gulp.dest(cssDest));
+});
+
+```
+
+1.2 task de produção, devemos utilizar naquele momento decisivo no qual iremos realizar aquela chamada `benção` codinome `deploy`, para seja lá qual for seu servidor, na onde esta task tem como objetivo `minificar` o arquivo, mas além disto, converter `sass` para `css`, **ISSO MESMO QUE VOCÊ LEU PEQUENO GAFANHOTO DEV!!!**. chega de realizar tarefas tediosas **PODE DEIXAR QUE O GULP REALIZA PARA VOCÊ!**, muito além de apenas minificar e converter, ele redireciona o nosso arquivo `minificado` e `convertido` para a pasta de `css/main.css`, olha so que maravilha!!
+
+```js
+// Task 'sassdev' - para todar esta task digite no terminal da raiz do projeto: 'gulp sassprod'
+gulp.task('sassprod', function() {
+  return gulp.src(scssFiles)
+    .pipe(sass(sassProdOptions).on('error', sass.logError))
+    .pipe(rename('main.min.css'))
+    .pipe(gulp.dest(cssDest));
+});
 
 ```
 
